@@ -84,11 +84,12 @@ a {
     overflow: hidden;
     width: 100%;
 
-    background-image: url('${prefixLink("/img/myface.png")}');
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    //background-image: url('${prefixLink("/img/myface.png")}');
+    //background-image: url("/img/myface.png");
+    //background-attachment: fixed;
+    //background-position: center center;
+    //background-repeat: no-repeat;
+    //background-size: cover;
 
     img {
       position: absolute;

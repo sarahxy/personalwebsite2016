@@ -15,7 +15,11 @@ export default class Index extends Component {
         <Helmet
           title={config.siteTitle}
         />
-        <div className="page--header">
+        <div className="page--header" style={{
+                background: `url(${prefixLink("/img/myface.png")}) no-repeat center center`,
+                backgroundSize: 'cover',
+                backgroundAttachment: 'fixed'
+              }}>
           {/*<img src={ prefixLink("/img/myface.png") } />*/}
           <div className="page--header--name">Sarah Huang</div>
         </div>
