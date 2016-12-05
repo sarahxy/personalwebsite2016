@@ -9,11 +9,31 @@ export default class Index extends Component {
     super(props);
   }
 
+  componentDidMount () {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount () {
+      window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll (event) {
+      let scrollTop = event.srcElement.body.scrollTop,
+          itemTranslate = Math.min(0, scrollTop/3 - 60);
+
+      this.setState({
+        transform: itemTranslate
+      });
+  }
+
   render () {
     return (
       <div className="page page--index">
         <Helmet
           title={config.siteTitle}
+          link={[
+              {"rel": "stylesheet", "href": "https://fonts.googleapis.com/css?family=Carrois+Gothic|Sail"},
+          ]}
         />
         <div className="page--header" style={{
                 background: `url(${prefixLink("/img/myface.png")}) no-repeat center center`,
@@ -29,7 +49,10 @@ export default class Index extends Component {
             <div className="work--text"><b><em>Hagglebuddy</em></b> // Android app</div>
           </div>
           <div className="work work--2">
-            <div className="work--text"><b><em>Reddit</em> Redesign</b> // web</div>
+            <Link
+              to={prefixLink('/redditredesign/')}>
+              <div className="work--text"><b><em>Reddit</em> Redesign</b> // web</div>
+            </Link>
           </div>
           <div className="work work--3">
             <div className="work--text"><b>WDD Final Project</b> // web</div>
