@@ -11,19 +11,27 @@ export default class Template extends Component {
       <div>
         <Headroom>
           <div className="navbar">
+            <div className="navbar__link--logo">
+              <Link
+                to={prefixLink('/')} className="logo"
+              >
+                <img src={prefixLink("/img/sarah-logo.png")}/>
+              </Link>
+            </div>
+
             <div className="navbar__link--wrapper">
               <Link
-                to={prefixLink('/')} className="navbar__link"
+                to={prefixLink('/portfolio/')} className="navbar__link"
               >
-                Home
+                Portfolio
               </Link>
             </div>
             <div className="navbar__link--wrapper">
-              <Link
-                to={prefixLink('/about/')} className="navbar__link"
-              >
-                About
-              </Link>
+                <Link
+                  to={prefixLink('/contact/')} className="navbar__link"
+                >
+                  Contact
+                </Link>
             </div>
           </div>
         </Headroom>
