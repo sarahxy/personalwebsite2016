@@ -1,2 +1,11 @@
-// About
+.page--about {
+  .page__title--text {
+    a {
+      color: $c__black;
 
+      &:visited {
+        color: $c__black;
+      }
+    }
+  }
+}

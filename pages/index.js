@@ -31,44 +31,112 @@ export default class Index extends Component {
       <div className="page page--index">
         <Helmet
           title={config.siteTitle}
-          link={[
-              {"rel": "stylesheet", "href": "https://fonts.googleapis.com/css?family=Carrois+Gothic|Sail"},
-          ]}
+
         />
-        <div className="page--header" style={{
-                background: `url(${prefixLink("/img/myface.png")}) no-repeat center center`,
-                backgroundSize: 'cover',
-                backgroundAttachment: 'fixed'
-              }}>
-          {/*<img src={ prefixLink("/img/myface.png") } />*/}
-          <div className="page--header--name">Sarah Huang</div>
+        <div className="portfolio__title">
+          <div className="portfolio__title--name">SARAH HUANG</div>
+          <div className="portfolio__title--description">ux designer & front-end developer</div>
+          
+          <div className="portfolio__title--socialmedia">
+            <div className="ic ic--1">
+              <a href="https://www.linkedin.com/in/sarahxhuang" target="_blank">
+                <img src={ prefixLink("/img/linkedin_icon.png") }/>
+              </a>
+            </div>
+            <div className="ic ic--2">
+              <a href="https://github.com/sarahxy" target="_blank">
+                <img src={ prefixLink("/img/github_icon.png") }/>
+              </a>
+            </div>
+            <div className="ic ic--3">
+              <a href="https://www.hackster.io/sarahxy" target="_blank">
+                <img src={ prefixLink("/img/hackster_icon.png") }/>
+              </a>
+            </div>
+            <div className="ic ic--4">
+              <Link
+              to={prefixLink('/img/MyResume.pdf')} target="_blank">
+                <img src={ prefixLink("/img/resume_icon.png") }/>
+              </Link>
+            </div>
+          </div>
+
         </div>
 
         <div className="portfolio__wrapper">
-          <div className="work work--1">
-            <div className="work--text"><b><em>Hagglebuddy</em></b> // Android app</div>
-          </div>
-          <div className="work work--2">
-            <Link
+          <Link
+              to={prefixLink('/foodquest/')}>
+            <div className="work work--1">
+              <img src={prefixLink('/img/foodquest/foodquest_bg.jpg')}/>
+              <div className="work--text"><b>Food Quest</b></div>
+              <div className="work--tools">Framer.js, Sketch</div> 
+            </div>
+          </Link>
+          <Link
+              to={prefixLink('/irc/')}>
+            <div className="work work--2">
+              <img src={prefixLink('/img/irc_bg.png')}/>
+              <div className="work--text"><b>IRC</b></div>
+              <div className="work--tools">HTML, SASS, React</div>
+            </div>
+          </Link>
+          <Link
+              to={prefixLink('/wdd/')}>
+            <div className="work work--3">
+              <img src={prefixLink('/img/wdd/wdd_logo.png')}/>
+              <div className="work--text"><b>Web Design Decal TA</b></div>
+              <div className="work--tools">Education</div>
+            </div>
+          </Link>
+          <Link
+              to={prefixLink('/syncfab/')}>
+            <div className="work work--4">
+              <img src={prefixLink('/img/syncfab/gears.jpg')}/>
+              <div className="work--text"><b>SyncFab UI/UX Intern</b></div>
+              <div className="work--tools">User Research, HTML, CSS, Foundation, Prototyping</div>
+            </div>
+          </Link>
+          <Link
+              to={prefixLink('/website/')}>
+            <div className="work work--5">
+              <img src={prefixLink('/img/website_bg.png')}/>
+              <div className="work--text"><b>Personal Website</b></div>
+              <div className="work--tools">HTML, CSS, JQuery</div>
+            </div>
+          </Link>
+          <Link
               to={prefixLink('/redditredesign/')}>
-              <div className="work--text"><b><em>Reddit</em> Redesign</b> // web</div>
-            </Link>
-          </div>
-          <div className="work work--3">
-            <div className="work--text"><b>WDD Final Project</b> // web</div>
-          </div>
-          <div className="work work--4">
-            <div className="work--text"><b><em>away</em></b> // prototyping</div>
-          </div>
-          <div className="work work--5">
-            <div className="work--text"><b>Web Design Decal</b> // teaching</div>
-          </div>
-          <div className="work work--6">
-            <div className="work--text"><b>SyncFab</b> // internship</div>
-          </div>
-          <div className="work work--7">
-            <div className="work--text"><b>Miscellaneous</b> // Photoshop & Illustrator</div>
-          </div>
+            <div className="work work--6">
+              <img src={prefixLink('/img/redesign/reddit_bg.jpg')}/>
+              <div className="work--text"><b><em>Reddit</em> Redesign</b></div> 
+              <div className="work--tools">HTML, CSS, Prototyping</div>
+            </div>
+          </Link>
+          <Link
+              to={prefixLink('/hagglebuddy/')}>
+            <div className="work work--7">
+              <img src={prefixLink('/img/hagglebuddy/hagglebuddy_demo.png')}/>
+              <div className="work--text"><b><em>Hagglebuddy</em></b></div>
+              <div className="work--tools">Android Studio, Java, Balsamiq</div>
+            </div>
+          </Link>
+          <Link
+              to={prefixLink('/away/')}>
+            <div className="work work--8">
+              <img src={prefixLink('/img/away/away_bg.jpg')}/>
+              <div className="work--text"><b><em>away</em></b></div>
+              <div className="work--tools">Prototyping</div>
+            </div>
+          </Link>
+          <Link
+              to={prefixLink('/adobe/')}>
+            <div className="work work--last">
+              <img src={prefixLink('/img/misc/fennecfox.png')}/>
+              <div className="work--text">Graphic Design</div>
+              <div className="work--tools">Photoshop, Illustrator</div>
+            </div>
+          </Link>
+
 
         </div>
       </div>

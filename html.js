@@ -25,6 +25,24 @@ export default class Html extends Component {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+
+          <meta property="og:title" content="Sarah Huang" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="" />
+          <meta property="og:description" content="Sarah Huang"/>
+          <meta property="og:site_name" content="Sarah Huang"/>
+
+          <link
+            href="https://fonts.googleapis.com/css?family=Carrois+Gothic|Fira+Sans+Condensed|Ruthie|Josefin+Sans"
+            rel="stylesheet"
+          />
+
+          <link
+            href={ prefixLink("/img/sarah-logo.png") }
+            rel="icon"
+            type="image/png"
+          />
+
           {head.title.toComponent()}
           {head.meta.toComponent()}
           {css}

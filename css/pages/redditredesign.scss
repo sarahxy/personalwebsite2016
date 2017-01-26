@@ -1,0 +1,85 @@
+// Reddit Redesign
+
+.page--redditredesign {
+  .page__wrapper {
+
+    .rr__content__wrapper {
+      position: relative;
+      left: 50%;
+      transform: translateX(-45%);
+      margin: 0 auto;
+      width: 100%;
+
+      .rr__text__wrapper {
+        width: 35%;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 50px;
+        margin-right: 50px;
+
+        .rr__content__text {
+          margin-bottom: 30px;
+          line-height: 1.75;
+        }
+
+        @media(max-width: $s__breakpoint--large) {
+          display: block;
+          width: 75%;
+        }
+
+        @media(max-width: $s__breakpoint--small) {
+          width: 90%;
+          margin: 5px;
+        }
+      }
+      
+      .rr__images__wrapper {
+        width: 50%;
+        display: inline-block;
+
+        .rr__image__wrapper {
+          width: 80%;
+          overflow: hidden;
+          margin-bottom: 50px;
+          text-align: center;
+          font-size: 0.8em;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        @media(max-width: $s__breakpoint--large) {
+          display: block;
+          width: 75%;
+          left: 50%;
+          transform: translateX(-45%);
+        }
+
+        @media(max-width: $s__breakpoint--small) {
+          width: 100%;
+          padding: 0px;
+          margin: 0px;
+        }
+      }
+
+      .rr__content__button {
+        position: relative;
+        border: 2px solid $c__black;
+        padding: 10px;
+        width: 100px;
+        text-align: center;
+        transition: 0.3s;
+        left: 35%;
+        margin-bottom: 50px;
+
+
+        &:hover {
+          border: 2px solid #BF6370;
+          color: #BF6370;
+          transform: scale(1.2);
+        }
+      }
+		}
+	}
+}

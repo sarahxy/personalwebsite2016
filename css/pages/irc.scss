@@ -1,0 +1,16 @@
+.page--irc {
+  .page__wrapper {
+  	.content__wrapper {
+  		.image__wrapper {
+  			img {
+          width: 70%;
+  				border: 1px solid $c__grey--light;
+
+          @media(max-width: $s__breakpoint--small) {
+            width: 100%;
+          }
+  			}
+  		}
+  	}
+  }
+}
