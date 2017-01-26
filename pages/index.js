@@ -75,7 +75,7 @@ export default class Index extends Component {
           <Link
               to={prefixLink('/irc/')}>
             <div className="work work--2">
-              <img src={prefixLink('/img/irc_bg.png')}/>
+              <img src={prefixLink('/img/irc/irc_bg.png')}/>
               <div className="work--text"><b>IRC</b></div>
               <div className="work--tools">HTML, SASS, React</div>
             </div>
